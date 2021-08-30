@@ -18,11 +18,10 @@ const BookCard = ({
                 <img src={thumbnail} alt={title}/>
                 <div className={styles.bookInfo}> 
                     <h6>{title}</h6>
-                    <p>author: {authors}</p> 
+                    <p>{authors?.join(", ")}</p> 
                     <Link to={`/${key}`} target='_blank' className={cx(styles.DetailsBtn, styles.btnPrimary)}>
                         Details
                     </Link>
-                   {console.log(key)} 
                 </div> 
             </div>      
         </article>

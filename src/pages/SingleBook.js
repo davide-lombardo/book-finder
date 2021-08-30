@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import defaultBcg from '../images/book-1.jfif'
-import Loading from '../components/Loading'
+//import Loading from '../components/Loading'
 
 import { Link } from 'react-router-dom'
 
@@ -16,17 +16,15 @@ const SingleBook = () => {
 
     const { fetchSingleBook, setLoading } = bindActionCreators(ActionCreators, dispatch)
 
+
     useEffect(() => {
-        fetchSingleBook(this.props.match.params.id)
+        fetchSingleBook(book.match.params.id)
         setLoading()
     }, [])
        
-    
-        const {loading, book} = this.props
         
             return (
                 <>
-                    { loading ? <Loading/> :
                     <section className='singleBook'>
                         <div className='imgContainer'>
                             <img 
@@ -56,7 +54,6 @@ const SingleBook = () => {
                             </a>
                         </div>
                     </section>
-                }
                 </>
             )
         }
