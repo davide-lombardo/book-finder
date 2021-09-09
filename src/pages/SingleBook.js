@@ -5,8 +5,9 @@ import defaultBcg from '../images/book-1.jfif'
 import { Link } from 'react-router-dom'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { ActionCreators } from '../redux/indexAC'
-import { bindActionCreators } from 'redux'
+import { fetchSingleBook, setLoading } from '../redux/actions/bookActions'
+// import { ActionCreators } from '../redux/indexAC'
+// import { bindActionCreators } from 'redux'
 
 
 const SingleBook = () => {
@@ -14,13 +15,13 @@ const SingleBook = () => {
     const { book } = useSelector(state => state)
     const dispatch = useDispatch()
 
-    const { fetchSingleBook, setLoading } = bindActionCreators(ActionCreators, dispatch)
+    // const { fetchSingleBook, setLoading } = bindActionCreators(ActionCreators, dispatch)
 
 
     useEffect(() => {
-        fetchSingleBook(book.match.params.id)
         setLoading()
-    }, [])
+        dispatch(fetchSingleBook())
+    }, [dispatch])
        
         
             return (

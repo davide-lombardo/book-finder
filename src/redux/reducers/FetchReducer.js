@@ -1,4 +1,4 @@
-import {FETCH_BOOKS, FETCH_SINGLE_BOOK, LOADING } from '../actions/actionTypes'
+import { FETCH_BOOKS, FETCH_SINGLE_BOOK, LOADING } from '../actions/actionTypes'
 
 const initialState = {
     books: [],

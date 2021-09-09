@@ -1,20 +1,19 @@
 import React from 'react'
-
 import styles from '../style/Searchbar.module.css'
 import { useState } from 'react'
 import BookList from './Booklist'
+import Loading from './Loading'
 
 import { useSelector, useDispatch } from 'react-redux'
-import { ActionCreators } from '../redux/indexAC'
-import { bindActionCreators } from 'redux'
-
+import { fetchBooks, setLoading } from '../redux/actions/bookActions'
 
 const Searchbar = () => {
 
     const { books } = useSelector(state => state)
+    const { loading } = useSelector(state => state)
+    console.log(books)
+    
     const dispatch = useDispatch()
-
-    const { fetchBooks, setLoading } = bindActionCreators(ActionCreators, dispatch)
 
     const [ query, setQuery ] = useState('')
     const [ search, setSearch ] = useState('')
@@ -28,8 +27,8 @@ const Searchbar = () => {
         event.preventDefault()
         setQuery(search)
         setSearch('') 
-        setLoading()
-        fetchBooks(query)
+        dispatch(setLoading())
+        dispatch(fetchBooks(query))     
     }
 
 
@@ -42,6 +41,7 @@ const Searchbar = () => {
             >
                 <input 
                 type='text'
+                placeholder='What are you looking for?'
                 value={search} 
                 className={styles.SearchBar}
                 onChange={handleChange}
@@ -53,9 +53,12 @@ const Searchbar = () => {
                 </button>
             </form>
         </section>
-        <BookList books={books}/>
+        {
+           (loading) ? (<Loading/>) : (<BookList books={books}/>)
+        }
     </>
     )
 }
+
 
 export default Searchbar

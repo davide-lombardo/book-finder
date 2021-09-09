@@ -33,7 +33,7 @@ BookCard.propTypes = {
     title: PropTypes.string.isRequired,
     authors: PropTypes.arrayOf(PropTypes.string).isRequired,
     thumbnail: PropTypes.string.isRequired,
-    slug: PropTypes.string.isRequired,
+    key: PropTypes.string.isRequired,
 }
 
 export default BookCard
