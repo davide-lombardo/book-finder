@@ -1,4 +1,4 @@
-# Book Finder - https://booker-react.netlify.app/
+# Book Finder - https://bookfindersite.netlify.app/
 
 ## Table of Contents
 1. [General Info](#general-info)
