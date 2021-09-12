@@ -6,7 +6,7 @@ const initialState = {
     book: []
 };
 
-export default function FetchReducer (state = initialState, action) {
+export default function FetchReducers (state = initialState, action) {
     switch (action.type) {
         case FETCH_BOOKS:
             return {

@@ -1,13 +1,18 @@
 import React from 'react'
+import styles from '../style/Error.module.css'
 import { Link } from 'react-router-dom'
 
 
 function Error() {
     return (
-        <div>
-             <Link to='/' className='btn-primary'>
-                back home
-            </Link>
+        <div className={styles.banner}>
+            <div className={styles.sectionTitle}>
+                <h1>404</h1>
+                <h4>not found</h4>
+                <Link to='/' className={styles.btnPrimary}>
+                  back home
+                </Link>
+            </div>
         </div>
     )
 }

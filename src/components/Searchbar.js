@@ -9,9 +9,8 @@ import { fetchBooks, setLoading } from '../redux/actions/bookActions'
 
 const Searchbar = () => {
 
-    const { books } = useSelector(state => state)
-    const { loading } = useSelector(state => state)
-    console.log(books)
+    const { books } = useSelector(state => ({...state.booksData}))
+    const { loading } = useSelector(state => ({...state.booksData}))
     
     const dispatch = useDispatch()
 
@@ -53,9 +52,9 @@ const Searchbar = () => {
                 </button>
             </form>
         </section>
-        {
-           (loading) ? (<Loading/>) : (<BookList books={books}/>)
-        }
+           {
+            (loading) ? <Loading /> : <BookList books={books} />
+           }
     </>
     )
 }

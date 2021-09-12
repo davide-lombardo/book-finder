@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
-import FetchReducer from './FetchReducer';
+import FetchReducers from './FetchReducers';
 
 
 const allReducers = combineReducers({
-   booksData: FetchReducer
+   booksData: FetchReducers
 })
 
 export default allReducers

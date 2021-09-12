@@ -1,0 +1,79 @@
+.singleBook {
+    padding: 5rem 0 0 0;
+  }
+  .imgContainer {
+    width: 80vw;
+    margin: 0 auto;
+  }
+  .imgContainer img {
+    width: 30%;
+    display: block;
+  }
+  .singleBookInfo {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+  }
+  .desc,
+  .info {
+    margin: 1rem 0;
+  }
+  .desc h3 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+  .desc p {
+    line-height: 1.5;
+  }
+  .info h3,
+  .info h6 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+  
+  .info h6 {
+    font-weight: 300;
+  }
+
+  @media screen and (min-width: 992px) {
+    .imgContainer,
+    .singleBookInfo {
+      width: 95vw;
+      max-width: 1170px;
+    }
+    .singleBookInfo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+    }
+    .info {
+      padding-left: 3rem;
+    }
+    .btnPrimary {
+      display: grid;
+      grid-gap: 2rem;
+    }
+  }
+
+.btnPrimary {
+    text-decoration: none;
+    letter-spacing: var(--mainSpacing);
+    color: var(--mainBlack);
+    background: var(--primaryColor);
+    padding: 0.4rem 0.9rem;
+    border: 3px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    font-size: 0.7rem;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 30vw;
+    border-radius: 1rem;
+  }
+  
+  .btnPrimary:hover {
+    background: transparent;
+    color: var(--primaryColor);
+  }
+

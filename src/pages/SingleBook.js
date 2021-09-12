@@ -1,60 +1,64 @@
+import React from 'react'
+import Loading from '../components/Loading'
+import styles from '../style/SingleBook.module.css'
+import { useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import defaultBcg from '../images/book-1.jfif'
-//import Loading from '../components/Loading'
-
 import { Link } from 'react-router-dom'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchSingleBook, setLoading } from '../redux/actions/bookActions'
-// import { ActionCreators } from '../redux/indexAC'
-// import { bindActionCreators } from 'redux'
 
 
 const SingleBook = () => {
 
-    const { book } = useSelector(state => state)
+    const { book } = useSelector(state => ({...state.booksData}))
+    const { loading } = useSelector(state => ({...state.booksData}))
+    const { id } = useParams()
+
     const dispatch = useDispatch()
 
-    // const { fetchSingleBook, setLoading } = bindActionCreators(ActionCreators, dispatch)
-
-
     useEffect(() => {
-        setLoading()
-        dispatch(fetchSingleBook())
-    }, [dispatch])
-       
-        
+        dispatch(setLoading())
+        dispatch(fetchSingleBook(id))
+    }, [id, dispatch])
+          
             return (
                 <>
-                    <section className='singleBook'>
-                        <div className='imgContainer'>
+                   {
+                    (loading) ? <Loading /> : 
+                    <section className={styles.singleBook}>
+                        <div className={styles.imgContainer}>
                             <img 
-                            src={ book.imageLinks === undefined ? defaultBcg : book.imageLinks.thumbnail} 
-                            alt=''/>
+                                src={ book.imageLinks === undefined ? defaultBcg : book.imageLinks.thumbnail} 
+                                alt=''
+                            />
                         </div>
-                        <div className='singleBookInfo'>
-                            <article>
+                        <div className={styles.singleBookInfo}>
+                            <article className={styles.info}>
                                 <h2>{book.title}</h2>
+                                <h6>author: {book.authors}</h6>
+                                <h6>publisher: {book.publisher}</h6> 
+                                <h6>language: {book.language}</h6> 
+                                <h6>pages: {book.pageCount}</h6> 
                             </article>
-                            <article>
-                                <h6>{book.authors}</h6>
-                                <h6>{book.pageCount}</h6>
-                                <h6>{book.publisher}</h6>
-                                <p>{book.description}</p>
+                            <article className={styles.desc}>
+                              <p>{book.description}</p>
                             </article>
-                            <Link to='/' className='btn-primary'>
+                            <Link to='/' className={styles.btnPrimary}>
                                 Back Home
                             </Link>
                             <a
                             href={book.previewLink}
                             target='_blank'
                             rel="noreferrer"
-                            className='btn-primary'
+                            className={styles.btnPrimary}
                             >
-                                View on Google Books
+                             View on Google Books
                             </a>
                         </div>
                     </section>
+                    } 
                 </>
             )
         }

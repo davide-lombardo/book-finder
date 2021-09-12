@@ -1,5 +1,5 @@
 import React from 'react'
-import NavbarCss from '../style/Navbar.module.css';
+import styles from '../style/Navbar.module.css';
 import cx from 'classnames'
 import logo from '../images/logo.svg'
 import { FaAlignRight } from 'react-icons/fa'
@@ -17,21 +17,21 @@ function Navbar() {
     }
 
     return (
-        <nav className={NavbarCss.navbar}>
-            <div className={NavbarCss.navCenter}>
-                <div className={NavbarCss.navHeader}>
+        <nav className={styles.navbar}>
+            <div className={styles.navCenter}>
+                <div className={styles.navHeader}>
                     <Link to='/'>
                         <img src={logo} alt='book finder'/>
                     </Link>
                     <button
                         type='button'
-                        className={NavbarCss.navBtn}
+                        className={styles.navBtn}
                         onClick={handleToggle}
                         >
-                    <FaAlignRight className={NavbarCss.navIcon}/>   
+                    <FaAlignRight className={styles.navIcon}/>   
                     </button>
                 </div>
-                <ul className={isOpen ? cx(NavbarCss.showNav, NavbarCss.navLinks) : NavbarCss.navLinks}>
+                <ul className={isOpen ? cx(styles.showNav, styles.navLinks) : styles.navLinks}>
                     <li>
                         <Link to='/'>Home</Link>
                     </li>

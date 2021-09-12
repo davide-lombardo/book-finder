@@ -10,7 +10,7 @@ const BookCard = ({
     thumbnail,
     title,
     authors,
-    key
+    id
 }) => {
     return (
         <article>
@@ -19,7 +19,7 @@ const BookCard = ({
                 <div className={styles.bookInfo}> 
                     <h6>{title}</h6>
                     <p>{authors?.join(", ")}</p> 
-                    <Link to={`/${key}`} target='_blank' className={cx(styles.DetailsBtn, styles.btnPrimary)}>
+                    <Link to={`/${id}`} target='_blank' className={cx(styles.DetailsBtn, styles.btnPrimary)}>
                         Details
                     </Link>
                 </div> 
@@ -33,7 +33,7 @@ BookCard.propTypes = {
     title: PropTypes.string.isRequired,
     authors: PropTypes.arrayOf(PropTypes.string).isRequired,
     thumbnail: PropTypes.string.isRequired,
-    key: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
 }
 
 export default BookCard
