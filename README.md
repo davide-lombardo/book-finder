@@ -2,22 +2,6 @@
 ## General Info
 This is Book Finder, it is a simple application that search every book you want. I've created it using React and the API of Google Books.
 
-## Description
-This is my first project using React and Redux.
-I hope that you like it, and that works perfectly.
-
-## Technologies
-Project is created with:
-* HTML5
-* CSS3
-* React Icons
-* CSS Modules
-* JavaScript ES6
-* Redux Thunk
-* Axios
-* React Router Dom
-* API
-
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
