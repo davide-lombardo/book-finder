@@ -25,9 +25,9 @@ const Searchbar = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         setQuery(search)
-        setSearch('') 
         dispatch(setLoading())
-        dispatch(fetchBooks(query))     
+        dispatch(fetchBooks(query))  
+        setSearch('')    
     }
 
 
