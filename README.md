@@ -45,7 +45,7 @@ This is Book Finder, it is a simple application that search every book you want.
 
 ## About The Project
 
-[![Website Screenshot][product-screenshot]](https://bookinn.vercel.app/)
+[![Website Screenshot][product-screenshot]](https://bookfindersite.netlify.app/)
 
 The website allows you to search for a large collection of books, using an API that will bring us the necessary information.
 
