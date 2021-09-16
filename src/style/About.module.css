@@ -5,10 +5,11 @@
 }
 
 .aboutDesc {
-    padding: 5rem 7rem 3rem 7rem;
-    display: flex;
-    justify-content: center;
-    letter-spacing: var(--mainSpaicing);
+  margin-top: 6rem;
+  padding: 5rem 7rem 3rem 7rem;
+  display: flex;
+  justify-content: center;
+  letter-spacing: var(--mainSpaicing);
 }
 
 .aboutDesc a {
@@ -38,4 +39,10 @@
   .btnPrimary:hover {
     background: transparent;
     color: var(--primaryColor);
+  }
+
+  @media screen and (max-width: 440px) {
+    .aboutDesc {
+      width: 50vw;
+    }
   }
