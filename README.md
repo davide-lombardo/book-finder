@@ -36,7 +36,6 @@ This is Book Finder, it is a simple application that search every book you want.
     </li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
@@ -98,12 +97,6 @@ You can access the web application at
 ```url
 http://localhost:3000/
 ```
-
-<!-- CONTACT -->
-
-## Contact
-
-Davide Lombardo - davide.lombardo.92@gmail.com
 
 start2impact personal page: https://talent.start2impact.it/profile/davide-lombardo
 
