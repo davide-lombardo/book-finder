@@ -46,6 +46,7 @@
   .showNav {
     height: 100px;
   }
+
   @media screen and (min-width: 768px) {
     .navBtn {
       display: none;
