@@ -14,19 +14,17 @@ const Searchbar = () => {
     
     const dispatch = useDispatch()
 
-    const [ query, setQuery ] = useState('')
     const [ search, setSearch ] = useState('')
 
 
     const handleChange = (event) => {
-        setSearch(event.target.value)
+        setSearch(event.target.value) 
     }
 
     const handleSubmit = (event) => {
-        event.preventDefault()
-        setQuery(search)
+        event.preventDefault() 
         dispatch(setLoading())
-        dispatch(fetchBooks(query))  
+        dispatch(fetchBooks(search))  
         setSearch('')    
     }
 

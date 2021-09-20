@@ -18,7 +18,7 @@ const BookList = ({ books = [] }) => {
        <div className={styles.cardContainer}>
                { books.map((item, index) => {
                     let thumbnail = ''
-                    if (item.volumeInfo.imageLinks.smallThumbnail) {
+                    if (item.volumeInfo.imageLinks) {
                     thumbnail = item.volumeInfo.imageLinks.smallThumbnail
                     }
                   return (

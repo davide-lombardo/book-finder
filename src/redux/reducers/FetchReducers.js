@@ -12,18 +12,18 @@ export default function FetchReducers (state = initialState, action) {
             return {
                 ...state,
                 books: action.payload,
-                loading: false
+                loading: false,
             };
         case FETCH_SINGLE_BOOK:
             return {
                 ...state,
                 book: action.payload,
-                loading: false
+                loading: false,
             };
         case LOADING:
             return {
                 ...state,
-                loading: true
+                loading: true,
             };    
         default: 
             return state;
