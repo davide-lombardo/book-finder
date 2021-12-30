@@ -73,7 +73,7 @@ Requirements:
 1. Clone the repo
 
 ```sh
-git clone https://github.com/matteo-minerva/bookinn
+git clone https://github.com/davide.lombardo/book-finder
 ```
 
 2. Install the missing dependencies
