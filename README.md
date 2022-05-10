@@ -2,7 +2,6 @@
 ## General Info
 This is Book Finder, it is a simple application that search every book you want. I've created it using React and the API of Google Books.
 
-[![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
